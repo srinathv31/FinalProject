@@ -77,14 +77,14 @@ public class Loan {
 		double y = 0;
 			for (int i = 0; i < getLoanPaymentSize(); i++) {
 				y += Math.abs(Finance.ipmt(dInterestRate/12, i, (int) (iTerm*12), dLoanAmount));
-				y = Math.round(y*100.00)/100.00;
+				y = Math.round(y*100.00);
 			}
 		return y;
 	}
 	
 	public double getPMT() {
 		double x = Math.abs(Finance.pmt(dInterestRate/12, (int) (iTerm*12), dLoanAmount));
-		return Math.round(x*100.00)/100.00;
+		return Math.round(x*100.00);
 	}
 	
 	public static Date parseDate(String date) {

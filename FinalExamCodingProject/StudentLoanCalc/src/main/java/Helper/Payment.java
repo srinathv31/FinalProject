@@ -26,9 +26,9 @@ public class Payment {
 		balance = 0;
 	}
 	
-	public Payment(int pmtID, Date dueDate, double balance1, Loan l) {
+	public Payment(int pmtID, Date due1, double balance1, Loan l) {
 		paymentID = pmtID;
-		due = dueDate;
+		due = due1;
 		balance = balance1;
 		this.l = l;
 		this.IPMT = balance1 + l.getInterestRate()/12;
